@@ -20,9 +20,14 @@ About 900 lines of Swift.
 - **Messenger calls are always asked**, never recorded automatically: they're often personal.
 - `⌃⌥R` starts or stops a recording by hand.
 
+## Download
+
+Get `CallRecorder.zip` from [Releases](https://github.com/romadinov/CallRecorder/releases/latest), unzip it, move
+CallRecorder to Applications and open it. It runs on macOS 15 or later, Apple Silicon and Intel.
+
 ## Build
 
-Needs macOS 15 and Xcode 16 (or its command line tools) on an Apple Silicon or Intel Mac.
+Needs macOS 15 and Xcode 16 (or its command line tools).
 
 ```bash
 git clone https://github.com/romadinov/CallRecorder.git
@@ -33,6 +38,7 @@ open build/CallRecorder.app
 
 The first time, macOS asks for **Microphone** and **System Audio Recording**. The build is signed ad hoc, so macOS asks
 again after each rebuild; `SIGN_IDENTITY="Apple Development: …" ./build.sh` signs it with your certificate instead.
+`./release.sh` makes the universal, Developer ID-signed and notarized zip that goes on the Releases page.
 
 ## Three things that went wrong, so you don't have to find them
 
